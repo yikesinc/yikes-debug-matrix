@@ -2,13 +2,15 @@
 /**
  * Debug message structure.
  *
- * @package YIKES Starter
+ * @package YIKES Debugger
  */
+
+namespace YIKES\Debugger\Debug;
 
 /**
  * Class Console Logger
  */
-class YIKES_Logger {
+class ConsoleLog {
 	/**
 	 * Current Log
 	 *

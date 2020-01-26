@@ -1,8 +1,9 @@
 <?php
 /**
- * Initialize Debugger
+ * YIKES Debugger
  *
- * @package YIKES Debugger
+ * @package YIKES\Debugger
+ * @author  Freddie Mixell
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

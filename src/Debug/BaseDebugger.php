@@ -1,15 +1,17 @@
 <?php
 /**
- * YIKES Base Debug.
+ * Base Debugger
  *
- * @package YIKES Starter
+ * @package YIKES Debugger
  */
+
+namespace YIKES\Debugger\Debug;
 
 /**
  * YIKES Base Debug Class
  */
-class YIKES_Base_Debug {
-	use YIKES_Debug_Helpers;
+class BaseDebugger {
+	use DebugTrait;
 
 	const WELCOME_MESSAGE = 'YIKES, Inc. Debugger Active';
 	const DEFAULT_GROUPS  = array(
@@ -33,7 +35,7 @@ class YIKES_Base_Debug {
 	/**
 	 * Get default groups.
 	 */
-	public function get_default_groups() {
+	public function get_default_groups(): array {
 		$default_groups = self::DEFAULT_GROUPS;
 		$add_groups     = (array) apply_filters( 'yikes_debugger_default_groups', array() );
 

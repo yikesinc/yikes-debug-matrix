@@ -58,6 +58,7 @@
 		<properties>
 			<property name="prefixes" type="array">
 				<element value="yikes_debugger"/>
+				<element value="yks_debug"/>
 			</property>
 		</properties>
 		<exclude-pattern type="relative">/views/*</exclude-pattern>

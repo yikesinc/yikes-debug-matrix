@@ -49,7 +49,7 @@
 	</rule>
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" value="level-playing-field"/>
+			<property name="text_domain" value="yikes-inc-debugger"/>
 		</properties>
 	</rule>
 
@@ -57,9 +57,7 @@
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
 			<property name="prefixes" type="array">
-				<element value="lpf"/>
-				<element value="ylpf"/>
-				<element value="yikes_levelplayingfield"/>
+				<element value="yikes_debugger"/>
 			</property>
 		</properties>
 		<exclude-pattern type="relative">/views/*</exclude-pattern>

@@ -5,10 +5,12 @@
  * @package YIKES Starter
  */
 
+namespace YIKES\Debugger\Message;
+
 /**
  * Debug Message Structure
  */
-class Debug_Message {
+class DebugMessage {
 	/**
 	 * Message
 	 *

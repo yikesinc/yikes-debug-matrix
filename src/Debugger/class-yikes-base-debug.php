@@ -8,15 +8,8 @@
 /**
  * YIKES Base Debug Class
  */
-class YIKES_Base_Debug implements YIKES_Singleton {
+class YIKES_Base_Debug {
 	use YIKES_Debug_Helpers;
-
-	/**
-	 * Instance.
-	 *
-	 * @var YIKES_Debug
-	 */
-	private static $instance = null;
 
 	const WELCOME_MESSAGE = 'YIKES, Inc. Debugger Active';
 	const DEFAULT_GROUPS  = array(
@@ -36,17 +29,6 @@ class YIKES_Base_Debug implements YIKES_Singleton {
 			'console_type' => 'error',
 		),
 	);
-
-	/**
-	 * Get Instance.
-	 */
-	public static function get_instance(): YIKES_Debug {
-		if ( ! self::$instance ) {
-			self::$instance = new YIKES_Debug();
-		}
-
-		return self::$instance;
-	}
 
 	/**
 	 * Get default groups.

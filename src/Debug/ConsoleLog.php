@@ -10,7 +10,7 @@ namespace YIKES\Debugger\Debug;
 /**
  * Class Console Logger
  */
-class ConsoleLog {
+final class ConsoleLog {
 	/**
 	 * Current Log
 	 *

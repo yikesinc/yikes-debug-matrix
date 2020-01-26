@@ -10,10 +10,10 @@ namespace YIKES\Debugger\Debug;
 /**
  * YIKES Base Debug Class
  */
-class BaseDebugger {
+class BaseDebug {
 	use DebugTrait;
 
-	const WELCOME_MESSAGE = 'YIKES, Inc. Debugger Active';
+	const WELCOME_MESSAGE = 'YIKES! Debugger Active';
 	const DEFAULT_GROUPS  = array(
 		'debug'      => array(
 			'label'        => 'Debug:',

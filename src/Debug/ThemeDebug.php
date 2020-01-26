@@ -5,14 +5,14 @@
  * @package YIKES Starter
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	die( 'Access denied.' );
-}
+namespace YIKES\Debugger\Debug;
+
+use YIKES\Debugger\Message\ThemeMessage;
 
 /**
- * Class YIKES Debug
+ * Class ThemeDebug
  */
-class YIKES_Debug extends YIKES_Base_Debug {
+final class ThemeDebug extends BaseDebug {
 	/**
 	 * Message log.
 	 *
@@ -28,7 +28,7 @@ class YIKES_Debug extends YIKES_Base_Debug {
 	public function print_error_log() {
 		if ( $this->check_debug_mode() ) {
 			try {
-				$console = new YIKES_Logger();
+				$console = new ConsoleLog();
 				// Start Debugger Group.
 				$console->group( static::WELCOME_MESSAGE );
 
@@ -84,8 +84,8 @@ class YIKES_Debug extends YIKES_Base_Debug {
 	public function add_message( string $debug_message, string $type = '' ): void {
 		if ( $this->check_debug_mode() ) {
 			try {
-				$this->add_to_log(
-					new Debug_Message( $debug_message, $type )
+				$this->set_log(
+					new ThemeMessage( $debug_message, $type )
 				);
 			} catch ( Exception $e ) {
 				echo wp_kses( '<script>console.log("Error occured when trying to create a new debug error.");</script>', array( 'script' => array() ) );
@@ -96,17 +96,15 @@ class YIKES_Debug extends YIKES_Base_Debug {
 	/**
 	 * Add to log.
 	 *
-	 * @param Debug_Message $message New message to add to the log.
+	 * @param ThemeMessage $message New message to add to the log.
 	 * @return void
 	 */
-	private function add_to_log( Debug_Message $message ): void {
+	private function set_log( ThemeMessage $message ): void {
 		try {
-			$new_message       = (array) $message->format();
-			$new_log           = array_merge( $this->message_log, $new_message );
-			$this->message_log = $new_log;
+			$this->message_log[] = $message->get_message();
 		} catch ( Exception $e ) {
 			if ( $this->check_debug_mode() ) {
-				echo wp_kses( '<script>console.log("Uncaught Exception: Found In Debug_Message->add_to_log();");</script>', array( 'script' => array() ) );
+				echo wp_kses( '<script>console.log("Uncaught Exception: Found In ThemeMessage->set_log();");</script>', array( 'script' => array() ) );
 			}
 		}
 	}

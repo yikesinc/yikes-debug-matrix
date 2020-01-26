@@ -8,9 +8,9 @@
 namespace YIKES\Debugger\Message;
 
 /**
- * Debug Message Structure
+ * class Theme Message
  */
-class DebugMessage {
+final class ThemeMessage {
 	/**
 	 * Message
 	 *
@@ -39,12 +39,10 @@ class DebugMessage {
 	/**
 	 * Get Message Formatted.
 	 */
-	public function format() {
+	public function get_message() {
 		return array(
-			array(
-				'message' => $this->debug_message,
-				'type'    => $this->type,
-			),
+			'message' => $this->debug_message,
+			'type'    => $this->type,
 		);
 	}
 }

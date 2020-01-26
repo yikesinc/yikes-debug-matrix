@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 /**
  * Debug message structure.
  *
@@ -6,8 +6,6 @@
  */
 
 namespace YIKES\Debugger;
-
-// phpcs:ignore Generic.Arrays.DisallowShortArraySyntax
 
 /**
  * Class Autoloader.

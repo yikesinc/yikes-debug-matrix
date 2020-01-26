@@ -1,8 +1,8 @@
 <?php
 /**
- * YIKES Export.
+ * Initialize Debugger
  *
- * @package YIKES Starter
+ * @package YIKES Debugger
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

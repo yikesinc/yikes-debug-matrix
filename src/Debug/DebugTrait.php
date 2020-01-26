@@ -5,11 +5,9 @@
  * @package YIKES Starter
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	die( 'Access denied.' );
-}
+namespace YIKES\Debugger\Debug;
 
-trait YIKES_Debug_Helpers {
+trait DebugTrait {
 	/**
 	 * Organize by type.
 	 *

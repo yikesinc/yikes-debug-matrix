@@ -14,6 +14,7 @@
 		<exclude name="WordPress.Files.FileName"/>
 		<exclude name="WordPress.Security.NonceVerification.Recommended"/>
 		<exclude name="WordPress.WhiteSpace.PrecisionAlignment.Found"/>
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
 	</rule>
 
 	<!-- Change behavior of some sniffs -->

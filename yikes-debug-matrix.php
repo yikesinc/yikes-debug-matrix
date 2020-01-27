@@ -14,7 +14,7 @@
  * Domain Path:  /languages
  * Version:      0.1.0
  * Requires PHP: 5.6
- * License:      GPL-2.0+
+ * License:      MIT
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

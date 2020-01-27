@@ -1,5 +1,8 @@
 <?php
 
+use \YIKES\Debugger\Debug\Debugger;
+use \YIKES\Debugger\Message\DebugMessage;
+
 if ( ! function_exists( 'yikes_debugger_php_version_check' ) ) {
 	/**
 	 * Required PHP Version.
@@ -71,5 +74,21 @@ if ( ! function_exists( 'yks_debug_wp_version_notice' ) ) {
 				esc_html( $GLOBALS['wp_version'] )
 			)
 		);
+	}
+}
+
+
+if ( ! function_exists( 'yks_debug_theme' ) ) {
+
+	/**
+	 * Debug Theme.
+	 *
+	 * Imperitive function for debugging your theme in development mode.
+	 *
+	 * @param DebugMessage
+	 */
+	function yks_debug_theme( DebugMessage $message ): void {
+		$theme_logger = ( new Debugger )->get_debugger( 'theme' );
+		$theme_logger->add_message( $message );
 	}
 }

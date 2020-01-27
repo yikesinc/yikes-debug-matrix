@@ -8,7 +8,7 @@
 namespace YIKES\Debugger\Message;
 
 /**
- * class Theme Message
+ * class Debug Message
  */
 final class DebugMessage {
 	/**

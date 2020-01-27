@@ -50,7 +50,7 @@
 	</rule>
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" value="yikes-inc-debugger"/>
+			<property name="text_domain" value="yikes-debug-matrix"/>
 		</properties>
 	</rule>
 

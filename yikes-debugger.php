@@ -10,7 +10,7 @@
  * Description:  Tooling for development and production debugging.
  * Author:       YIKES, Inc.
  * Author URI:   http://www.yikesinc.com
- * Text Domain:  yikes-inc-debugger
+ * Text Domain:  yikes-debug-matrix
  * Domain Path:  /languages
  * Version:      0.1.0
  * Requires PHP: 5.6

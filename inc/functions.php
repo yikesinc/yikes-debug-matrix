@@ -30,7 +30,7 @@ if ( ! function_exists( 'yikes_debugger_php_version_notice' ) ) {
 			'<div class="error"><p>%s</p></div>',
 			sprintf(
 				/* translators: %1$s is the required PHP version, %2$s is the current version */
-				esc_html__( 'YIKES Debug Matrix requires PHP version %1$s or above. Your site is using PHP version %2$s.', 'yikes-inc-debugger' ),
+				esc_html__( 'YIKES Debug Matrix requires PHP version %1$s or above. Your site is using PHP version %2$s.', 'yikes-debug-matrix' ),
 				esc_html( YIKES_DEBUGGER_PHP ),
 				esc_html( PHP_VERSION )
 			)
@@ -68,7 +68,7 @@ if ( ! function_exists( 'yks_debug_wp_version_notice' ) ) {
 			'<div class="error"><p>%s</p></div>',
 			sprintf(
 				/* translators: %1$s is the required WP version, %2$s is the current version */
-				esc_html__( 'YIKES Debug Matrix requires WordPress version %1$s or above. Your site is using WordPress version %2$s.', 'yikes-inc-debugger' ),
+				esc_html__( 'YIKES Debug Matrix requires WordPress version %1$s or above. Your site is using WordPress version %2$s.', 'yikes-debug-matrix' ),
 				esc_html( YIKES_DEBUGGER_WP ),
 				esc_html( $GLOBALS['wp_version'] )
 			)

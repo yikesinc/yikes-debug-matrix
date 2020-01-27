@@ -19,7 +19,7 @@ namespace YIKES\Debugger\Debug;
  * @author  Freddie Mixell
  */
 interface DebuggerType {
-	public function add_message( $message );
-	public function get_messages();
+	public function add_message( string $debug_message, string $type = '' );
+	public function print_error_log();
 	public function get_label();
 }

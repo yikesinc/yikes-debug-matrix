@@ -1,8 +1,9 @@
 <?php
 /**
- * Debug message structure.
+ * YIKES Debugger
  *
- * @package YIKES Debugger
+ * @package YIKES\Debugger
+ * @author  Freddie Mixell
  */
 
 namespace YIKES\Debugger;

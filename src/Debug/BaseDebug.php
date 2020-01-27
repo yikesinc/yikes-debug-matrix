@@ -59,7 +59,7 @@ abstract class BaseDebug {
 	 *
 	 * @return boolean
 	 */
-	public function check_debug_mode(): boolean {
+	public function check_debug_mode(): bool {
 		if ( defined( 'YIKES_DEBUG_ENABLED' ) && true === YIKES_DEBUG_ENABLED ) {
 			return true;
 		}

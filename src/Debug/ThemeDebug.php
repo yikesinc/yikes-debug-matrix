@@ -7,35 +7,21 @@
 
 namespace YIKES\Debugger\Debug;
 
-use YIKES\Debugger\Message\ThemeMessage;
-use YIKES\Debugger\Service;
+use YIKES\Debugger\Message\DebugMessage;
 
 /**
  * Class ThemeDebug
  */
-final class ThemeDebug extends BaseDebug implements Service, DebugType {
+final class ThemeDebug extends BaseDebug implements DebuggerType {
 
 	/**
 	 * Message log.
 	 *
 	 * @var array
 	 */
-	private $message_log = array();
+	public $message_log = array();
 
 	const CONSOLE_LABEL = 'Theme Debugger';
-
-	/**
-	 * Register debugger functionality.
-	 *
-	 * Hook into WordPress during development to output error messages.
-	 *
-	 * @return void
-	 */
-	public function register(): void {
-		if ( $this->check_debug_mode() ) {
-			add_action( 'shutdown', [ $this, 'print_error_log' ] );
-		}
-	}
 
 	/**
 	 * Get Label.
@@ -44,7 +30,7 @@ final class ThemeDebug extends BaseDebug implements Service, DebugType {
 	 *
 	 * @return string
 	 */
-	protected function get_label(): string {
+	public function get_label(): string {
 		return self::CONSOLE_LABEL;
 	}
 
@@ -57,11 +43,11 @@ final class ThemeDebug extends BaseDebug implements Service, DebugType {
 		try {
 			$console = new ConsoleLog();
 			// Start Debugger Group.
-			$console->group( static::WELCOME_MESSAGE );
+			$console->group( $this->get_label() );
 
-			if ( ! empty( $this->get_message_log() ) ) {
+			if ( ! empty( $this->message_log ) ) {
 				$messages = $this->organize_by_type(
-					$this->get_message_log()
+					$this->message_log
 				);
 
 				foreach ( $messages as $group => $values ) {
@@ -111,7 +97,7 @@ final class ThemeDebug extends BaseDebug implements Service, DebugType {
 		if ( $this->check_debug_mode() ) {
 			try {
 				$this->set_log(
-					new ThemeMessage( $debug_message, $type )
+					new DebugMessage( $debug_message, $type )
 				);
 			} catch ( Exception $e ) {
 				echo wp_kses( '<script>console.log("Error occured when trying to create a new debug error.");</script>', array( 'script' => array() ) );
@@ -122,10 +108,10 @@ final class ThemeDebug extends BaseDebug implements Service, DebugType {
 	/**
 	 * Add to log.
 	 *
-	 * @param ThemeMessage $message New message to add to the log.
+	 * @param DebugMessage $message New message to add to the log.
 	 * @return void
 	 */
-	private function set_log( ThemeMessage $message ): void {
+	private function set_log( DebugMessage $message ): void {
 		try {
 			$this->message_log[] = $message->get_message();
 		} catch ( Exception $e ) {

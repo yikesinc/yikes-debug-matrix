@@ -2,7 +2,7 @@
 
 use \YIKES\Matrix\Debug\Debugger;
 
-if ( ! function_exists( 'YIKES_MATRIX_PHP_version_check' ) ) {
+if ( ! function_exists( 'yks_debug_php_version_check' ) ) {
 	/**
 	 * Required PHP Version.
 	 *
@@ -11,7 +11,7 @@ if ( ! function_exists( 'YIKES_MATRIX_PHP_version_check' ) ) {
 	 */
 	function yks_debug_php_version_check(): bool {
 		if ( version_compare( YIKES_MATRIX_PHP, PHP_VERSION, '>' ) ) {
-			add_action( 'admin_notices', 'YIKES_MATRIX_PHP_version_notice' );
+			add_action( 'admin_notices', 'yks_debug_php_version_notice' );
 
 			return false;
 		}
@@ -19,7 +19,7 @@ if ( ! function_exists( 'YIKES_MATRIX_PHP_version_check' ) ) {
 	}
 }
 
-if ( ! function_exists( 'YIKES_MATRIX_PHP_version_notice' ) ) {
+if ( ! function_exists( 'yks_debug_php_version_notice' ) ) {
 	/**
 	 * Display admin notice for incompatible PHP version.
 	 *

@@ -8,6 +8,8 @@
 
 namespace YIKES\Debugger\Debug;
 
+use YIKES\Debugger\Service;
+
 /**
  * Class Debugger
  *
@@ -15,7 +17,12 @@ namespace YIKES\Debugger\Debug;
  *
  * @since 0.1.0
  */
-final class Debugger {
+final class Debugger implements Service {
+
+	public function register() {
+		$theme_debugger = $this->get_debugger( 'theme' );
+		add_action( 'shutdown', [ $theme_debugger, 'print_error_log' ] );
+	}
 
 	/**
 	 * Get Debugger
@@ -47,10 +54,7 @@ final class Debugger {
 
 			switch ( $debugger ) {
 				case 'theme':
-					$debuggers['theme'] = new ThemeDebugger();
-					break;
-				case 'plugin':
-					$debuggers['plugin'] = new PluginDebugger();
+					$debuggers['theme'] = new ThemeDebug();
 					break;
 				default:
 					throw new Error( 'Not a valid debug class.' );

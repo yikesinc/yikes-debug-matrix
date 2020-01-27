@@ -11,8 +11,8 @@ add_action( 'pre_get_posts', 'alter_posts_query' );
  *
  * @param WP_Query $query current executing query.
  */
-function alter_posts_query() {
-    /**
+function alter_posts_query( $query ) {
+    	/**
 	 * Debug WP Query Conditional Methods
 	 *
 	 * @example $query->is_home()

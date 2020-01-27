@@ -30,7 +30,7 @@ final class Container {
 	 * @param array $services Services to register with the container.
 	 */
 	public function __construct( array $services = [] ) {
-		$this->services = $services ?: [];
+		$this->services = $services ? $services : [];
 	}
 
 	/**

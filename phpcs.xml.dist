@@ -59,7 +59,6 @@
 		<properties>
 			<property name="prefixes" type="array">
 				<element value="yikes_matrix"/>
-				<element value="yikes_debug_matrix"/>
 				<element value="yks_debug"/>
 				<element value="yidr"/>
 			</property>

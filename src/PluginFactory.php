@@ -8,6 +8,8 @@
 
 namespace YIKES\Debugger;
 
+use YIKES\Debugger\Debug\ThemeDebug;
+
 /**
  * Class PluginFactory
  *
@@ -47,5 +49,10 @@ final class PluginFactory {
 	 */
 	private function get_service_container() {
 
+		$services = new Container();
+
+		$services->add_service( ThemeDebug::class );
+
+		return $services;
 	}
 }

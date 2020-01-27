@@ -10,11 +10,17 @@ namespace YIKES\Debugger\Debug;
 /**
  * YIKES Base Debug Class
  */
-class BaseDebug {
-	use DebugTrait;
+abstract class BaseDebug {
 
-	const WELCOME_MESSAGE = 'YIKES! Debugger Active';
-	const DEFAULT_GROUPS  = array(
+	/**
+	 * Default Types.
+	 *
+	 * Types to sort each debugger into groups and colors.
+	 *
+	 * @since 0.1.0
+	 * @var array
+	 */
+	protected $default_types = array(
 		'debug'      => array(
 			'label'        => 'Debug:',
 			'messages'     => array(),
@@ -32,11 +38,39 @@ class BaseDebug {
 		),
 	);
 
+	const WELCOME_MESSAGE = 'YIKES! Debugger Active';
+	const CONSOLE_LABEL   = '_override_';
+
+	/**
+	 * Get Label.
+	 *
+	 * Helper method to remind you to implement get_label().
+	 *
+	 * @return string
+	 */
+	protected function get_label(): string {
+		return 'You need to override the get_label() method in your class.';
+	}
+
+	/**
+	 * Check debug mode.
+	 *
+	 * Helper function to determine if we should console log errors.
+	 *
+	 * @return boolean
+	 */
+	public function check_debug_mode(): boolean {
+		if ( defined( 'YIKES_DEBUG_ENABLED' ) && true === YIKES_DEBUG_ENABLED ) {
+			return true;
+		}
+		return false;
+	}
+
 	/**
 	 * Get default groups.
 	 */
 	public function get_default_groups(): array {
-		$default_groups = self::DEFAULT_GROUPS;
+		$default_groups = $this->default_types;
 		$add_groups     = (array) apply_filters( 'yikes_debugger_default_groups', array() );
 
 		if ( ! empty( $add_groups ) ) {
@@ -75,5 +109,34 @@ class BaseDebug {
 		}
 
 		return $default_groups;
+	}
+
+	/**
+	 * Organize by type.
+	 *
+	 * Reorder our types for console groups.
+	 *
+	 * @return array
+	 */
+	protected function organize_by_type(): array {
+		$all_messages = $this->get_default_groups();
+
+		foreach ( $this->message_log as $error ) {
+			$error_type = isset( $error['type'] ) ? (string) $error['type'] : 'debug';
+
+			// If we're not dealing with a default type make sure its formatted correctly.
+			if ( ! isset( $all_messages[ $error_type ] ) ) {
+				$fix_label = isset( $all_messages[ $error_type ]['label'] ) ? $all_messages[ $error_type ]['label'] : ucfirst( $error_type ) . ':';
+				$fix_type  = array(
+					'messages' => array(),
+					'label'    => $fix_label,
+				);
+
+				$all_messages[ $error_type ] = $fix_type;
+			}
+			$all_messages[ $error_type ]['messages'][] = isset( $error['message'] ) ? (string) $error['message'] : '';
+		}
+
+		return $all_messages;
 	}
 }

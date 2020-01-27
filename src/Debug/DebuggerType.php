@@ -21,4 +21,5 @@ namespace YIKES\Debugger\Debug;
 interface DebuggerType {
 	public function add_message( $message );
 	public function get_messages();
+	public function get_label();
 }

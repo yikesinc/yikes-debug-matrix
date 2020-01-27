@@ -5,7 +5,7 @@
  * @package YIKES Starter
  */
 
-namespace YIKES\Debugger\Message;
+namespace YIKES\Matrix\Message;
 
 /**
  * class Debug Message

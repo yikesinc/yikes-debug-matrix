@@ -1,21 +1,21 @@
 <?php
 /**
- * YIKES Debugger
+ * YIKES Debug Matrix
  *
- * @package YIKES\Debugger
+ * @package YIKES\Matrix
  * @author  Freddie Mixell
  */
 
-namespace YIKES\Debugger;
+namespace YIKES\Matrix;
 
-use YIKES\Debugger\Debug\Debugger;
+use YIKES\Matrix\Debug\Debugger;
 
 /**
  * Class PluginFactory
  *
  * @since   0.1.0
  *
- * @package YIKES\Debugger
+ * @package YIKES\Matrix
  * @author  Freddie Mixell
  */
 final class PluginFactory {

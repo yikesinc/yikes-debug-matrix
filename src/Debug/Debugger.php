@@ -1,14 +1,14 @@
 <?php
 /**
- * YIKES Debugger
+ * YIKES Debug Matrix
  *
- * @package YIKES\Debugger
+ * @package YIKES\Matrix
  * @author  Freddie Mixell
  */
 
-namespace YIKES\Debugger\Debug;
+namespace YIKES\Matrix\Debug;
 
-use YIKES\Debugger\Service;
+use YIKES\Matrix\Service;
 
 /**
  * Class Debugger

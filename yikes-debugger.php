@@ -1,11 +1,11 @@
 <?php
 /**
- * YIKES Debugger
+ * YIKES Debug Matrix
  *
- * @package YIKES\Debugger
+ * @package YIKES\Matrix
  * @author  Freddie Mixell
  *
- * Plugin Name:  YIKES Debugger
+ * Plugin Name:  YIKES Debug Matrix
  * Plugin URI:   http://www.yikesplugins.com
  * Description:  Tooling for development and production debugging.
  * Author:       YIKES, Inc.

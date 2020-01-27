@@ -1,12 +1,12 @@
 <?php
 /**
- * YIKES Debugger
+ * YIKES Debug Matrix
  *
- * @package YIKES\Debugger
+ * @package YIKES\Matrix
  * @author  Freddie Mixell
  */
 
-namespace YIKES\Debugger;
+namespace YIKES\Matrix;
 
 /**
  * Trait PluginHelper.
@@ -14,7 +14,7 @@ namespace YIKES\Debugger;
  * Handle basic WordPress plugin variables like the plugin's path and URL.
  *
  * @since   0.1.0
- * @package YIKES\Debugger
+ * @package YIKES\Matrix
  */
 trait PluginHelper {
 

@@ -1,19 +1,19 @@
 <?php
 /**
- * YIKES Debugger
+ * YIKES Debug Matrix
  *
- * @package YIKES\Debugger
+ * @package YIKES\Matrix
  * @author  Freddie Mixell
  */
 
-namespace YIKES\Debugger\Exception;
+namespace YIKES\Matrix\Exception;
 
 /**
  * Class InvalidService.
  *
  * @since   0.1.0
  *
- * @package YIKES\Debugger\Exception
+ * @package YIKES\Matrix\Exception
  * @author  Freddie Mixell
  */
 class InvalidService extends \InvalidArgumentException implements Exception {

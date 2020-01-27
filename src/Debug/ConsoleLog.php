@@ -2,10 +2,10 @@
 /**
  * Debug message structure.
  *
- * @package YIKES Debugger
+ * @package YIKES Debug Matrix
  */
 
-namespace YIKES\Debugger\Debug;
+namespace YIKES\Matrix\Debug;
 
 /**
  * Class Console Logger

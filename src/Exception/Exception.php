@@ -1,12 +1,12 @@
 <?php
 /**
- * YIKES Debugger
+ * YIKES Debug Matrix
  *
- * @package YIKES\Debugger
+ * @package YIKES\Matrix
  * @author  Freddie Mixell
  */
 
-namespace YIKES\Debugger\Exception;
+namespace YIKES\Matrix\Exception;
 
 /**
  * Interface Exception.
@@ -14,7 +14,7 @@ namespace YIKES\Debugger\Exception;
  * This interface is implemented by all of this plugin's exceptions so that
  * we can catch "internal" exceptions only.
  *
- * @package YIKES\Debugger\Exception
+ * @package YIKES\Matrix\Exception
  * @author Freddie Mixell
  */
 interface Exception {

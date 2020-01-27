@@ -1,12 +1,12 @@
 <?php
 /**
- * YIKES Debugger
+ * YIKES Debug Matrix
  *
- * @package YIKES\Debugger
+ * @package YIKES\Matrix
  * @author  Freddie Mixell
  */
 
-namespace YIKES\Debugger;
+namespace YIKES\Matrix;
 
 /**
  * Class Plugin.
@@ -16,7 +16,7 @@ namespace YIKES\Debugger;
  *
  * @since   0.1.0
  *
- * @package YIKES\Debugger
+ * @package YIKES\Matrix
  * @author  Freddie Mixell
  */
 final class Plugin implements Registerable {
@@ -88,7 +88,7 @@ final class Plugin implements Registerable {
 	 */
 	protected function get_services() {
 		/**
-		 * Fires right before the YIKES Debugger services are retrieved.
+		 * Fires right before the YIKES Debug Matrix services are retrieved.
 		 *
 		 * @param Container $container The services container object.
 		 */

@@ -1,12 +1,12 @@
 <?php
 /**
- * YIKES Debugger
+ * YIKES Debug Matrix
  *
- * @package YIKES\Debugger
+ * @package YIKES\Matrix
  * @author  Freddie Mixell
  */
 
-namespace YIKES\Debugger;
+namespace YIKES\Matrix;
 
 // Don't allow loading outside of WordPress.
 if ( ! defined( 'ABSPATH' ) ) {

@@ -2,10 +2,10 @@
 /**
  * Base Debugger
  *
- * @package YIKES Debugger
+ * @package YIKES Debug Matrix
  */
 
-namespace YIKES\Debugger\Debug;
+namespace YIKES\Matrix\Debug;
 
 /**
  * YIKES Base Debug Class

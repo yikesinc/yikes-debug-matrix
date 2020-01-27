@@ -5,9 +5,9 @@
  * @package YIKES Starter
  */
 
-namespace YIKES\Debugger\Debug;
+namespace YIKES\Matrix\Debug;
 
-use YIKES\Debugger\Message\DebugMessage;
+use YIKES\Matrix\Message\DebugMessage;
 
 /**
  * Class ThemeDebug

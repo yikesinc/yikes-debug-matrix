@@ -1,7 +1,6 @@
 <?php
 
 use \YIKES\Debugger\Debug\Debugger;
-use \YIKES\Debugger\Message\DebugMessage;
 
 if ( ! function_exists( 'yikes_debugger_php_version_check' ) ) {
 	/**
@@ -85,10 +84,12 @@ if ( ! function_exists( 'yks_debug_theme' ) ) {
 	 *
 	 * Imperitive function for debugging your theme in development mode.
 	 *
-	 * @param DebugMessage
+	 * @param string $debug_message Message to display in js console.
+	 * @param string $type Seperate errors by type.
+	 * @return void
 	 */
-	function yks_debug_theme( DebugMessage $message ): void {
+	function yks_debug_theme( string $message, $type = '' ): void {
 		$theme_logger = ( new Debugger )->get_debugger( 'theme' );
-		$theme_logger->add_message( $message );
+		$theme_logger->add_message( $message, $type );
 	}
 }

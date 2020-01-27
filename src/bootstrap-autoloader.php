@@ -18,3 +18,5 @@ require_once __DIR__ . '/Autoloader.php';
 $yidr_autoloader = new Autoloader();
 $yidr_autoloader->add_namespace( __NAMESPACE__, __DIR__ );
 $yidr_autoloader->register();
+
+( new PluginFactory() )->create()->register();

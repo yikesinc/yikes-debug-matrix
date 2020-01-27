@@ -10,7 +10,7 @@ namespace YIKES\Debugger\Message;
 /**
  * class Theme Message
  */
-final class ThemeMessage {
+final class DebugMessage {
 	/**
 	 * Message
 	 *

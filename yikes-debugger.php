@@ -4,6 +4,17 @@
  *
  * @package YIKES\Debugger
  * @author  Freddie Mixell
+ *
+ * Plugin Name:  YIKES Debugger
+ * Plugin URI:   http://www.yikesplugins.com
+ * Description:  Tooling for development and production debugging.
+ * Author:       YIKES, Inc.
+ * Author URI:   http://www.yikesinc.com
+ * Text Domain:  yikes-inc-debugger
+ * Domain Path:  /languages
+ * Version:      0.1.0
+ * Requires PHP: 5.6
+ * License:      GPL-2.0+
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

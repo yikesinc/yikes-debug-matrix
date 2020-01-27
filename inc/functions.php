@@ -2,7 +2,7 @@
 
 use \YIKES\Matrix\Debug\Debugger;
 
-if ( ! function_exists( 'yikes_debugger_php_version_check' ) ) {
+if ( ! function_exists( 'YIKES_MATRIX_PHP_version_check' ) ) {
 	/**
 	 * Required PHP Version.
 	 *
@@ -10,8 +10,8 @@ if ( ! function_exists( 'yikes_debugger_php_version_check' ) ) {
 	 * @return bool
 	 */
 	function yks_debug_php_version_check(): bool {
-		if ( version_compare( YIKES_DEBUGGER_PHP, PHP_VERSION, '>' ) ) {
-			add_action( 'admin_notices', 'yikes_debugger_php_version_notice' );
+		if ( version_compare( YIKES_MATRIX_PHP, PHP_VERSION, '>' ) ) {
+			add_action( 'admin_notices', 'YIKES_MATRIX_PHP_version_notice' );
 
 			return false;
 		}
@@ -19,7 +19,7 @@ if ( ! function_exists( 'yikes_debugger_php_version_check' ) ) {
 	}
 }
 
-if ( ! function_exists( 'yikes_debugger_php_version_notice' ) ) {
+if ( ! function_exists( 'YIKES_MATRIX_PHP_version_notice' ) ) {
 	/**
 	 * Display admin notice for incompatible PHP version.
 	 *
@@ -31,7 +31,7 @@ if ( ! function_exists( 'yikes_debugger_php_version_notice' ) ) {
 			sprintf(
 				/* translators: %1$s is the required PHP version, %2$s is the current version */
 				esc_html__( 'YIKES Debug Matrix requires PHP version %1$s or above. Your site is using PHP version %2$s.', 'yikes-debug-matrix' ),
-				esc_html( YIKES_DEBUGGER_PHP ),
+				esc_html( YIKES_MATRIX_PHP ),
 				esc_html( PHP_VERSION )
 			)
 		);
@@ -47,7 +47,7 @@ if ( ! function_exists( 'yks_debug_wp_version_check' ) ) {
 	 * @return bool
 	 */
 	function yks_debug_wp_version_check(): bool {
-		if ( version_compare( YIKES_DEBUGGER_WP, $GLOBALS['wp_version'], '>' ) ) {
+		if ( version_compare( YIKES_MATRIX_WP, $GLOBALS['wp_version'], '>' ) ) {
 			add_action( 'admin_notices', 'yks_debug_wp_version_notice' );
 
 			return false;
@@ -69,7 +69,7 @@ if ( ! function_exists( 'yks_debug_wp_version_notice' ) ) {
 			sprintf(
 				/* translators: %1$s is the required WP version, %2$s is the current version */
 				esc_html__( 'YIKES Debug Matrix requires WordPress version %1$s or above. Your site is using WordPress version %2$s.', 'yikes-debug-matrix' ),
-				esc_html( YIKES_DEBUGGER_WP ),
+				esc_html( YIKES_MATRIX_WP ),
 				esc_html( $GLOBALS['wp_version'] )
 			)
 		);

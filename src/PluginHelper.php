@@ -25,8 +25,8 @@ trait PluginHelper {
 	 * @return string
 	 */
 	protected function get_version() {
-		if ( defined( 'YIKES_DEBUGGER_VERSION' ) ) {
-			return YIKES_DEBUGGER_VERSION;
+		if ( defined( 'YIKES_MATRIX_VERSION' ) ) {
+			return YIKES_MATRIX_VERSION;
 		}
 		return (string) time();
 	}

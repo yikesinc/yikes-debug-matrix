@@ -25,24 +25,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Plugin Version
  */
-if ( ! defined( 'YIKES_DEBUGGER_VERSION' ) ) {
-	define( 'YIKES_DEBUGGER_VERSION', '0.1.0' );
+if ( ! defined( 'YIKES_MATRIX_VERSION' ) ) {
+	define( 'YIKES_MATRIX_VERSION', '0.1.0' );
 }
 
 
 /**
  * Minimum PHP Version
  */
-if ( ! defined( 'YIKES_DEBUGGER_PHP' ) ) {
-	define( 'YIKES_DEBUGGER_PHP', '5.6.0' );
+if ( ! defined( 'YIKES_MATRIX_PHP' ) ) {
+	define( 'YIKES_MATRIX_PHP', '5.6.0' );
 }
 
 
 /**
  * Minimum WordPress Version
  */
-if ( ! defined( 'YIKES_DEBUGGER_WP' ) ) {
-	define( 'YIKES_DEBUGGER_WP', '4.8' );
+if ( ! defined( 'YIKES_MATRIX_WP' ) ) {
+	define( 'YIKES_MATRIX_WP', '4.8' );
 }
 
 

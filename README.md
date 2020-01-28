@@ -22,7 +22,7 @@ $some_query = new WP_Query( $some_args );
 $logger->add_message( $some_query->found_posts, 'Some Query Debug' );
 ```
 
-Since that factory is referencing the same instance of `ThemeDebug()` no matter where you right your code it will end up in your same log. The second param passed is your label. So if you're debugging taxonomy templates and custom post types and whatever else you can group like messages together. Those groups will be printed as seperate `console.group()`
+Since that factory is referencing the same instance of `ThemeDebug()` no matter where you write your code it will end up in your same log. The second param passed is your label. So if you're debugging taxonomy templates and custom post types and whatever else you can group like messages together. Those groups will be printed as seperate `console.group()`
 
 ## Debug Examples:
 

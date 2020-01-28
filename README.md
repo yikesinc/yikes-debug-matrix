@@ -1,3 +1,13 @@
+## Usage
+
+#### In Development Only:
+Set this constant in your wp-config.php to allow the debugger to run. This is done as a safety measure in case you accidently ship this code into production.
+
+```
+define( 'YIKES_DEBUG_ENABLED', true );
+```
+
+
 ## Debug Examples:
 
 #### Pre Get Posts

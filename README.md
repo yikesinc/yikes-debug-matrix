@@ -63,7 +63,6 @@ function alter_posts_query( $query ) {
 }
 ```
 
-
 #### Recursive Debug
 
 ```
@@ -88,6 +87,6 @@ function recursive_debug( $key, $value ) {
 		case 'null':
 			$final = 'null';
 	}
-	return yks_debug_theme( 'var: ' . $key . ' ' . $final, $type . ' Debug' );
+	return yks_debug_theme( 'var: ' . $key . ' ' . $final, $type . Debug' );
 }
 ```

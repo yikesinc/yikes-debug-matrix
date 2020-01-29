@@ -12,7 +12,7 @@
  * Author URI:   http://www.yikesinc.com
  * Text Domain:  yikes-debug-matrix
  * Domain Path:  /languages
- * Version:      0.1.0
+ * Version:      0.1.1
  * Requires PHP: 5.6
  * License:      MIT
  */
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin Version
  */
 if ( ! defined( 'YIKES_MATRIX_VERSION' ) ) {
-	define( 'YIKES_MATRIX_VERSION', '0.1.0' );
+	define( 'YIKES_MATRIX_VERSION', '0.1.1' );
 }
 
 

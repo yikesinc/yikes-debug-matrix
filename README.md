@@ -36,3 +36,32 @@ function alter_posts_query( $query ) {
 	}
 }
 ```
+
+
+#### Recursive Debug
+
+```
+function recursive_debug( $key, $value ) {
+	if ( is_array( $value ) ) {
+		foreach ( $value as $k => $v ) {
+			recursive_debug( $k, $v );
+		}
+		return;
+	}
+	$type = gettype( $value );
+	switch ( $type ) {
+		case 'integer':
+		case 'string':
+		case 'float':
+		case 'doubles':
+			$final = $value;
+			break;
+		case 'object':
+			$final = yks_debug_theme( esc_js( wp_json_encode( $value ) ) );
+			break;
+		case 'null':
+			$final = 'null';
+	}
+	return yks_debug_theme( 'var: ' . $key . ' ' . $final, $type . ' Debug' );
+}
+```
